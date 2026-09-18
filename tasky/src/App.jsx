@@ -25,6 +25,13 @@ function App() {
     console.log(`${taskIndex} ${tasks[taskIndex].done}`);
   }
 
+//
+    const deleteHandler = (taskIndex) => {
+    const tasks = [...taskState.tasks];
+    tasks.splice(taskIndex, 1);
+    setTaskState({tasks});
+  } 
+
 
   return (
     <div className="container">
@@ -37,7 +44,9 @@ function App() {
       deadline={task.deadline}
       key={task.id}
       done={task.done}
-      markDone={() => doneHandler(index)}
+      markDone={() => doneHandler(index)} // added a new markDone prop to the task component and passed it down form the app component
+        deleteTask = {() => deleteHandler(index)}  // added a new deleteTask prop to the task component and passed it down form the app component 
+      priority={task.priority}
     />
   ))}
 
