@@ -1,4 +1,6 @@
+
 import React, { useState } from 'react';
+import AddTaskForm from './components/Form';
 
 
 import './App.css';
@@ -49,6 +51,7 @@ function App() {
       priority={task.priority}
     />
   ))}
+  <AddTaskForm />
 
     </div>
   );
