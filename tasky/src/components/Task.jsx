@@ -1,15 +1,24 @@
 import React from 'react';
-
+  // The priority prop is displayed in the task card, allowing users to see the priority level of each task.
 const Task = (props) => {
     
     return (
-        <div className="card">
+       <div className="card" style={{backgroundColor: props.done ? 'lightgrey' : '#5bb4c4'}}>
+
+
             <p className="title">{props.title}</p>
             <p>Due: {props.deadline}</p>
             <p className="description">{props.description}</p>
-            // The priority prop is displayed in the task card, allowing users to see the priority level of each task.
+          
             <p>Priority: {props.priority}</p>
+
+         <button onClick={props.markDone} className='doneButton'>Done</button>
+
+
             
+
+
+
         </div>
     )
 }
