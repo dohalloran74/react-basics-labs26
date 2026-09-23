@@ -22,7 +22,7 @@ body {
 .container{
   text-align: center;
 }
-*/
+
 
 .card {
   display: inline-block;
@@ -65,7 +65,7 @@ button {
   color: green;
 }
 
-/*  style the button when the task is marked as done */
+/*  style the button when the task is marked as done 
 button {
   border: none;
   border-radius: 3px;
@@ -92,7 +92,7 @@ button {
   color: red;
 }
 
-
+*/
 input[type=text], input[type=date] ,select {
   width: 100%;
   padding: 12px 20px;
