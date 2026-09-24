@@ -10,7 +10,11 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
 import DoneIcon from '@mui/icons-material/Done';
-import TaskIcon from '@mui/icons-material/Task';
+//import TaskIcon from '@mui/icons-material/Task';
+import Divider from '@mui/material/Divider';
+
+import Chip from '@mui/material/Chip'; // Import the Chip component from Material-UI
+
 
 
   // The priority prop is displayed in the task card, allowing users to see the priority level of each task.
@@ -32,6 +36,7 @@ const Task = (props) => {
   >
     <CardHeader
       title={props.title}
+    
       sx={{
         backgroundColor: "primary.main",
         color: "white",
@@ -41,6 +46,14 @@ const Task = (props) => {
         textAlign: 'center'
       }}
     />
+
+{/* divider creates a divider line and then use sx to syle
+it with primary.main(blue) my:2 adds approx 16px margin
+on top and bottom of divider line. */}
+    <Divider  sx={{
+    my: 2,
+    borderColor: 'primary.main'
+  }}/>
 
     <CardContent>
       <Box
@@ -53,13 +66,23 @@ const Task = (props) => {
           padding: '20px'
         }}
       >
-        <Typography
+//
+        <Chip
+  label={`Due: ${props.deadline}`}
+  color="primary"
+  sx={{
+    fontWeight: 'bold',
+    m: 1
+  }}
+/>
+       {/* <Typography
           component="p"
           variant="subtitle2"
           color="text.primary"
         >
           Due: {props.deadline}
-        </Typography>
+        </Typography> */}
+
       </Box>
 
       <Typography
