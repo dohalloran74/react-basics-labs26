@@ -8,6 +8,10 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import DeleteIcon from '@mui/icons-material/Delete';
+import DoneIcon from '@mui/icons-material/Done';
+import TaskIcon from '@mui/icons-material/Task';
+
 
   // The priority prop is displayed in the task card, allowing users to see the priority level of each task.
 const Task = (props) => {
@@ -35,6 +39,7 @@ const Task = (props) => {
 
     <CardContent>
       <Box
+    
         sx={{
           display: 'flex',
           justifyContent: 'center',
@@ -75,6 +80,7 @@ const Task = (props) => {
         onClick={props.markDone}
       >
         Done
+        <DoneIcon />
       </Button>
 
       <Button
@@ -84,8 +90,11 @@ const Task = (props) => {
         onClick={props.deleteTask}
       >
         Delete
+        <DeleteIcon />
+
       </Button>
     </CardActions>
+  
   </Card>
 </Grid>
 
