@@ -23,7 +23,8 @@ const Task = (props) => {
     return (
        <Grid
   key={props.id}
-  size={{ xs: 12, md: 4 }}
+   size={{ xs: 12, sm: 6, md: 4 }}
+  //size={{ xs: 12, md: 4 }}
 >
   <Card
     sx={{
@@ -66,7 +67,7 @@ on top and bottom of divider line. */}
           padding: '20px'
         }}
       >
-//
+
         <Chip
   label={`Due: ${props.deadline}`}
   color="primary"
