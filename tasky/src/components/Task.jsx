@@ -23,14 +23,19 @@ const Task = (props) => {
 >
   <Card
     sx={{
-      backgroundColor: props.done ? 'lightgrey' : 'lightblue',
-      padding: '20px'
+      backgroundColor: props.done ? 'lightgrey' : 'white',
+      padding: '20px',
+        border: '2px solid navy',  // Add a border to the card
+      borderRadius: '10px',  // Rounded corners 
+      boxShadow: 4
     }}
   >
     <CardHeader
       title={props.title}
       sx={{
-        backgroundColor: 'white',
+        backgroundColor: "primary.main",
+        color: "white",
+        textAlign: 'center',
         borderRadius: '3px',
         padding: '20px',
         textAlign: 'center'
@@ -78,9 +83,13 @@ const Task = (props) => {
         size="small"
         color="success"
         onClick={props.markDone}
+        sx={{ // Add border radius to the button
+          borderRadius: '20px',
+        }} 
       >
-        Done
-        <DoneIcon />
+        Done 
+    <DoneIcon sx={{ ml: 1 }} /> 
+     
       </Button>
 
       <Button
